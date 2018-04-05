@@ -6,7 +6,43 @@
 
 <h1>Welcome to my website</h1>
 
+<h2>CFS Postman Companion</h2>
 <a>Download CFS Postman Companion <a href="postmancompanion-1.0-SNAPSHOT.zip">here</a></p>
+
+<b>Installation and Usage</b>
+<ol>
+    <li>download the zip above</li>
+    <li>unpack the zip into a new empty folder</li>
+    <li>run a Terminal and cd into that folder</li>
+    <li>cd bin</li>
+    <li>./postmancompanion<br>
+        The application should now be running on port 18080 by default
+    </li>
+    <li>Make a request from Postman like this:<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<B>http://localhost:18080/?showMessage=my message blah&promptFieldNames=field1&promptFieldNames=field2</B><br>
+        <br>
+    You must specify a "showMessage" parameter and one or more "promptFieldNames" parameters
+    </li>
+    <li>
+    Fill in the values in the UI that pops up<br>
+    You'll see you will get a prompt box in the UI for every "promptFieldNames" parameter you specify<br>
+        TODO: Screenshot of UI
+    </li>
+    <li>
+    Postman will get a response like this:<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<B>{"field1":"hello","field2":"world"}</B><br>
+        <br>
+    The keys are the prompt field names, the values are the values you typed in
+    </li>
+    <li>
+    Parse the response with a Postman script<br>
+    TODO: Show example script
+    </li>
+</ol>
+
+
 
 </body>
 </html>
